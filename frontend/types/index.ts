@@ -2,7 +2,7 @@ export interface LeadActivity {
   id: number;
   lead_id: number;
   activity_type: string;
-  description: str;
+  description: string;
   created_at: string;
 }
 
@@ -96,6 +96,6 @@ export interface ComplianceReport {
   compliance_score: number;
   compliance_status: string;
   compliance_notes: string;
-  can_spam_valid: bool;
+  can_spam_valid: boolean;
   spam_trigger_words: string[];
 }
