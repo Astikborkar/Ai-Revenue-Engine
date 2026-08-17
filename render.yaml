@@ -22,4 +22,4 @@ services:
         fromService:
           type: web
           name: ai-revenue-backend
-          property: url
+          property: host
