@@ -1,7 +1,11 @@
 import axios from 'axios';
 import { Lead, CreateLeadPayload, PipelineStageGroup, DashboardMetrics, OutreachMessage, ComplianceReport } from '../types';
 
-const rawUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const defaultUrl = process.env.NODE_ENV === 'production'
+  ? 'https://ai-revenue-backend-tlys.onrender.com'
+  : 'http://localhost:8000';
+
+const rawUrl = process.env.NEXT_PUBLIC_API_URL || defaultUrl;
 let API_BASE_URL = rawUrl.trim();
 
 if (API_BASE_URL && !API_BASE_URL.startsWith('http://') && !API_BASE_URL.startsWith('https://')) {
