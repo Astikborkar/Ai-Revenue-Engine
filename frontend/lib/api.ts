@@ -1,11 +1,10 @@
 import axios from 'axios';
 import { Lead, CreateLeadPayload, PipelineStageGroup, DashboardMetrics, OutreachMessage, ComplianceReport } from '../types';
 
-const defaultUrl = process.env.NODE_ENV === 'production'
-  ? 'https://ai-revenue-backend-tlys.onrender.com'
-  : 'http://localhost:8000';
+const LIVE_BACKEND_URL = 'https://ai-revenue-backend-tlys.onrender.com';
+const LOCAL_BACKEND_URL = 'http://localhost:8000';
 
-const rawUrl = process.env.NEXT_PUBLIC_API_URL || defaultUrl;
+const rawUrl = process.env.NEXT_PUBLIC_API_URL || (process.env.NODE_ENV === 'production' ? LIVE_BACKEND_URL : LOCAL_BACKEND_URL);
 let API_BASE_URL = rawUrl.trim();
 
 if (API_BASE_URL && !API_BASE_URL.startsWith('http://') && !API_BASE_URL.startsWith('https://')) {
@@ -20,8 +19,24 @@ export const api = axios.create({
 });
 
 export const checkHealth = async () => {
-  const res = await api.get('/health');
-  return res.data;
+  try {
+    const res = await api.get('/health');
+    return res.data;
+  } catch (err) {
+    // Smart Fallback: If local backend is offline, automatically failover to live Render cloud backend
+    if (API_BASE_URL.includes('localhost') || API_BASE_URL.includes('127.0.0.1')) {
+      try {
+        const cloudRes = await axios.get(`${LIVE_BACKEND_URL}/health`);
+        if (cloudRes.data?.status === 'healthy') {
+          api.defaults.baseURL = LIVE_BACKEND_URL;
+          return cloudRes.data;
+        }
+      } catch (cloudErr) {
+        // Render backend sleeping or offline
+      }
+    }
+    throw err;
+  }
 };
 
 export const getLeads = async (statusFilter?: string): Promise<Lead[]> => {
