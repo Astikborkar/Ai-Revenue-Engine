@@ -141,6 +141,138 @@ def seed_initial_data():
                         "key_pain_points": ["Outreach.io seat costs scaling too fast", "Low custom personalization"],
                         "market_signals": ["Achieved SOC2 Type II compliance", "Active RFP for AI sales software"]
                     })
+                },
+                {
+                    "company_name": "HyperScale Data Inc",
+                    "website": "https://hyperscaledata.ai",
+                    "industry": "Data Infra & AI",
+                    "location": "Seattle, WA",
+                    "contact_name": "Alex Mercer",
+                    "email": "alex.mercer@hyperscaledata.ai",
+                    "company_size": "150-300",
+                    "annual_revenue": "$15M-$30M",
+                    "deal_value": 50000.0,
+                    "lead_score": 91,
+                    "lead_status": "qualified",
+                    "qualification_reason": "Raised $20M Series B funding. Tech stack: Snowflake, Databricks, Salesforce.",
+                    "ai_research_data": json.dumps({
+                        "score": 91,
+                        "buying_intent": "High",
+                        "icp_fit_category": "Tier 1 Enterprise Target",
+                        "tech_stack": ["Snowflake", "Databricks", "Salesforce"],
+                        "key_pain_points": ["SDR team spending 12h/wk on manual research"],
+                        "market_signals": ["Series B $20M closed", "Hiring RevOps leads"]
+                    })
+                },
+                {
+                    "company_name": "OmniChannel Retail AI",
+                    "website": "https://omnichannelretail.io",
+                    "industry": "E-Commerce Tech",
+                    "location": "New York, NY",
+                    "contact_name": "Rachel Zhang",
+                    "email": "rachel@omnichannelretail.io",
+                    "company_size": "200-400",
+                    "annual_revenue": "$20M-$40M",
+                    "deal_value": 40000.0,
+                    "lead_score": 86,
+                    "lead_status": "meeting",
+                    "qualification_reason": "Integrated Shopify Plus API. Seeking AI email personalization boost.",
+                    "ai_research_data": json.dumps({
+                        "score": 86,
+                        "buying_intent": "High",
+                        "icp_fit_category": "Tier 1 Target",
+                        "tech_stack": ["Klaviyo", "Shopify Plus", "AWS"],
+                        "key_pain_points": ["Cold outbound open rates under 15%"],
+                        "market_signals": ["Shopify enterprise integration live"]
+                    })
+                },
+                {
+                    "company_name": "BioPharma Analytics Group",
+                    "website": "https://biopharmaanalytics.org",
+                    "industry": "Biotech & Life Sciences",
+                    "location": "Cambridge, MA",
+                    "contact_name": "Dr. Jonathan Cross",
+                    "email": "j.cross@biopharmaanalytics.org",
+                    "company_size": "350-700",
+                    "annual_revenue": "$40M-$80M",
+                    "deal_value": 65000.0,
+                    "lead_score": 84,
+                    "lead_status": "new",
+                    "qualification_reason": "Expanding clinical trials. High demand for compliance-audited outreach.",
+                    "ai_research_data": json.dumps({
+                        "score": 84,
+                        "buying_intent": "Medium",
+                        "icp_fit_category": "Tier 2 Enterprise",
+                        "tech_stack": ["Veeva CRM", "Microsoft Cloud"],
+                        "key_pain_points": ["Regulatory audit friction in sales communications"],
+                        "market_signals": ["Expanding clinical trial operations"]
+                    })
+                },
+                {
+                    "company_name": "FinFlow Global",
+                    "website": "https://finflowglobal.com",
+                    "industry": "Banking Tech & Payments",
+                    "location": "London, UK",
+                    "contact_name": "Michael Thorne",
+                    "email": "m.thorne@finflowglobal.com",
+                    "company_size": "300-600",
+                    "annual_revenue": "$30M-$60M",
+                    "deal_value": 55000.0,
+                    "lead_score": 89,
+                    "lead_status": "opportunity",
+                    "qualification_reason": "European market expansion announced. Requires GDPR compliance verification.",
+                    "ai_research_data": json.dumps({
+                        "score": 89,
+                        "buying_intent": "High",
+                        "icp_fit_category": "Tier 1 Global Target",
+                        "tech_stack": ["Salesforce", "Stripe", "Segment"],
+                        "key_pain_points": ["Cross-border GDPR compliance verification"],
+                        "market_signals": ["Expanding EU operations"]
+                    })
+                },
+                {
+                    "company_name": "CyberShield Threat Labs",
+                    "website": "https://cybershieldlabs.com",
+                    "industry": "InfoSec & SecOps",
+                    "location": "Denver, CO",
+                    "contact_name": "Jessica Rivera",
+                    "email": "j.rivera@cybershieldlabs.com",
+                    "company_size": "80-160",
+                    "annual_revenue": "$8M-$18M",
+                    "deal_value": 38000.0,
+                    "lead_score": 93,
+                    "lead_status": "qualified",
+                    "qualification_reason": "Hired 6 Enterprise AEs. Seeking AI personalization to boost meeting bookings.",
+                    "ai_research_data": json.dumps({
+                        "score": 93,
+                        "buying_intent": "High",
+                        "icp_fit_category": "Tier 1 High Value",
+                        "tech_stack": ["HubSpot", "Cloudflare", "Kubernetes"],
+                        "key_pain_points": ["Low custom personalization"],
+                        "market_signals": ["Added 6 AE seats"]
+                    })
+                },
+                {
+                    "company_name": "Industrial Automation Dynamics",
+                    "website": "https://iadynamics.com",
+                    "industry": "Smart Manufacturing",
+                    "location": "Detroit, MI",
+                    "contact_name": "Thomas Wright",
+                    "email": "t.wright@iadynamics.com",
+                    "company_size": "120-250",
+                    "annual_revenue": "$12M-$28M",
+                    "deal_value": 32000.0,
+                    "lead_score": 78,
+                    "lead_status": "won",
+                    "qualification_reason": "IoT plant rollout across North America. Deal successfully closed won.",
+                    "ai_research_data": json.dumps({
+                        "score": 78,
+                        "buying_intent": "High",
+                        "icp_fit_category": "Closed Won Account",
+                        "tech_stack": ["SAP ERP", "Microsoft Dynamics"],
+                        "key_pain_points": ["Fragmented partner communication workflows"],
+                        "market_signals": ["Expanding smart factory rollout"]
+                    })
                 }
             ]
 
